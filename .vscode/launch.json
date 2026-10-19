@@ -1,0 +1,30 @@
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Streamlit Policy Chatbot",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "streamlit",
+            "args": [
+                "run",
+                "app.py",
+                "--server.headless",
+                "true",
+                "--server.port",
+                "8501"
+            ],
+            "cwd": "${workspaceFolder}",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Open chatbot in Chrome",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:8501",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
